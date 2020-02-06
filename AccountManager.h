@@ -16,7 +16,7 @@ using namespace std;
 class AccountManager {
 public:
 
-    static AccountManager* getInstance() {
+        AccountManager* getInstance() {
         if(instance != nullptr)
             return instance;
         else
@@ -38,19 +38,19 @@ public:
     void removeAccount(int id);
 
 private:
-    AccountManager() {
+        AccountManager() {
         instance = this;
         next_number = 0;
     }
 
     void updateNextNumber();
 
-    static AccountManager* instance;
+    AccountManager* instance;
     vector<shared_ptr<BankAccount>> accounts;
     int next_number;
 };
 
-static AccountManager* instance = nullptr;
+ AccountManager* instance = nullptr;
 
 
 #endif //ESLABORATORIO_ACCOUNTMANAGER_H
