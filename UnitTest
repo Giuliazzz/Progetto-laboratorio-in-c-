@@ -89,3 +89,11 @@ INSTANTIATE_TEST_CASE_P(Default, withdrawAccountTest,
     account_state{100,200,100,false}
     ));
     
+#include "gtest/gtest.h"
+
+int main(int argc, char** argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}
+
+
